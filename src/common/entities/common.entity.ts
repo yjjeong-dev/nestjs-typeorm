@@ -2,14 +2,17 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
+  ObjectID,
+  ObjectIdColumn,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
 
 @Entity()
 export class CoreEntity {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @ObjectIdColumn()
+  // @PrimaryGeneratedColumn()
+  id: ObjectID;
 
   @CreateDateColumn()
   createdAt: Date;
